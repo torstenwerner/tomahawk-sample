@@ -14,14 +14,16 @@
 <h:body>
     <h:form>
 
-        <!--<f:loadBundle basename="org.apache.myfaces.examples.resource.example_messages" var="example_messages"/>-->
-        <!--<f:loadBundle basename="org.apache.myfaces.examples.resource.build" var="buildInfo"/>-->
+        <f:loadBundle basename="jsf.sample.example_messages" var="example_messages"/>
+        <f:loadBundle basename="jsf.sample.build" var="buildInfo"/>
 
         <h:panelGrid id="header_group1" columns="2" styleClass="pageHeader">
-            <t:graphicImage id="header_logo" url="images/logo_mini.jpg"/>
+            <t:graphicImage id="header_logo" url="images/logo_mini.jpg" alt="#{example_messages['alt_logo']}"/>
             <h:panelGroup>
                 <h:outputText style="font-size:20px;color:#FFFFFF" escape="false"
                               value="MyFaces - The free JavaServer&#8482; Faces Implementation"/>
+                <h:outputText style="font-size:10px;color:#FFFFFF"
+                              value=" (Tomahawk Version #{buildInfo['tomahawk_version']}, using #{buildInfo ['jsf_implementation']})"/>
             </h:panelGroup>
         </h:panelGrid>
 
