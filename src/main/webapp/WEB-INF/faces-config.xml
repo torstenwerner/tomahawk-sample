@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+              version="2.0">
+
+    <managed-bean>
+        <managed-bean-name>calcForm</managed-bean-name>
+        <managed-bean-class>jsf.sample.CalcForm</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>ucaseForm</managed-bean-name>
+        <managed-bean-class>jsf.sample.UCaseForm</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>validationController</managed-bean-name>
+        <managed-bean-class>jsf.sample.ValidationController</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+
+    <application>
+        <resource-bundle>
+            <base-name>jsf.sample.example_messages</base-name>
+            <var>example_messages</var>
+        </resource-bundle>
+    </application>
+</faces-config>
